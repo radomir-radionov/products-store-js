@@ -4,8 +4,9 @@ const btnFilterByCheepItemsEl = document.querySelector('#btnFilterByCheepItems')
 const btnFilterByAlphabetItemsEl = document.querySelector('#btnFilterByAlphabetItems');
 const inputSearchEl = document.querySelector('#input-search');
 const textPrudctsemptyEl = document.querySelector('.text-prudcts-empty');
+const btnLogoutEl = document.querySelector('#btn-logout');
 
-console.log(inputSearchEl);
+console.log(btnLogoutEl);
 
 let products = [];
 const searchProducts = [];
@@ -25,11 +26,9 @@ const drawProducts = (data) => {
 const fetchData = async () => {
   try {
     const response = await fetch('https://dummyjson.com/products?limit=10');
-
     const data = await response.json();
-    console.log(data);
-    products = data.products;
 
+    products = data.products;
     drawProducts(products);
   } catch (error) {
     console.log(error);
@@ -91,3 +90,10 @@ inputSearchEl.addEventListener('keyup', () => {
     textPrudctsemptyEl.style.display = 'none';
   }
 });
+
+const logout = () => {
+  localStorage.removeItem('user');
+  window.location.href = '/';
+};
+
+btnLogoutEl.addEventListener('click', logout);

@@ -11,9 +11,10 @@
 <body>
     <form id="signupForm">
         <h2>Sign Up</h2>
+
         <label for="name">Name:
-            <input type="text" id="name" name="name" minlength="2" pattern="[А-Яа-яЁё]+" placeholder="Enter your name"
-                required>
+            <!--  minlength="2" pattern="[А-Яа-яЁё]+"  -->
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
             <small class="hint">Only russian characters and min 2 symbols</small>
         </label>
 
@@ -23,18 +24,37 @@
         </label>
 
         <label for="password">Password:
-            <input type="password" id="password" name="password" minlength="5" pattern="[0-9]+"
-                placeholder="Enter your password" required>
+            <!-- minlength="5" pattern="[0-9]+" -->
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
             <small class="hint">Only numbers and min 5 sumbols</small>
         </label>
 
         <label for="confirmPassword">Confirm Password:
-            <input type="password" id="confirmPassword" name="confirmPassword" minlength="5" pattern="[0-9]+"
-                placeholder="Confirm your password" required>
+            <!-- minlength="5" pattern="[0-9]+" -->
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
+                required>
             <small class="hint">Only numbers and min 5 sumbols</small>
         </label>
 
         <button id="btn-submit" type="submit">Sign Up</button>
+        <p>Have an account? <span class="text-toggle-form">Sign In</span></p>
+    </form>
+    <form id="signInForm">
+        <h2>Sign In</h2>
+
+        <label for="email">Email:
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <small class="hint">Example: user@gmail.com</small>
+        </label>
+
+        <label for="password">Password:
+            <!--  minlength="5" pattern="[0-9]+" -->
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <small class="hint">Only numbers and min 5 sumbols</small>
+        </label>
+
+        <button id="btn-submit" type="submit">Sign In</button>
+        <p>Don't have an account? <span class="text-toggle-form">Sign Up</span></p>
     </form>
 
     <script src="script.js"></script>

@@ -70,7 +70,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h2 {
@@ -79,7 +79,8 @@ h2 {
   color: rgb(255, 174, 0);
 }
 
-form {
+#signupForm,
+#signInForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -162,4 +163,8 @@ form {
     border: none;
     background: rgb(255, 235, 191);
   }
+}
+
+#signupForm {
+  display: none;
 }

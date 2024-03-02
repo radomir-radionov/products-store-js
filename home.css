@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
 
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  height: 100%;
 }
 
-h5 {
+body,
+h5,
+p {
   margin: 0;
 }
 
@@ -17,6 +23,7 @@ h5 {
   gap: 40px;
   width: 100%;
   max-width: 1400px;
+  /* min-height: 100%; */
 }
 
 .text-prudcts-empty {
@@ -65,4 +72,26 @@ header {
 
 main {
   display: flex;
+  height: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+
+  & > .copyright-text {
+    display: flex;
+    gap: 20px;
+
+    & > p {
+      display: flex;
+      align-items: center;
+    }
+
+    & > hr {
+      height: 16px;
+    }
+  }
 }
